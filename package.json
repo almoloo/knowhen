@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "watch": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "tailwind": "npx tailwindcss -i ./public/stylesheets/style.src.css -o ./public/stylesheets/style.css --watch",
+    "watch": "npm run dev & npm run tailwind"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -16,6 +18,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
-    "prettier": "2.6.2"
+    "prettier": "2.6.2",
+    "tailwindcss": "^3.0.24"
   }
 }
